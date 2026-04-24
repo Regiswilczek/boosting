@@ -1678,5 +1678,36 @@ ul  { list-style: none; }
   box-shadow: 0 8px 24px rgba(0,0,0,.06);
 }
 
-/* Height of nav-center determines offset for nav-right — approximation */
-.navbar.nav-open .nav-right { top: calc(100% + 200px); }
+/* nav-right top is set dynamically via JS (navbar.offsetHeight + navCenter.offsetHeight) */
+.navbar.nav-open .nav-right { top: calc(100% + 200px); } /* JS overrides this at runtime */
+
+/* ══════════════════════════════════════════════════════
+   WILL-CHANGE — composited layers for continuous animations
+══════════════════════════════════════════════════════ */
+.hv-astro,
+.hv-rock-1, .hv-rock-2, .hv-rock-3, .hv-rock-4, .hv-rock-5,
+.hv-badge-1, .hv-badge-2, .hv-badge-3 {
+  will-change: transform;
+}
+
+/* ══════════════════════════════════════════════════════
+   PREFERS-REDUCED-MOTION — disable CSS animations
+══════════════════════════════════════════════════════ */
+@media (prefers-reduced-motion: reduce) {
+  /* Decorative CSS keyframe animations */
+  .hv-grid,
+  .hv-glow-1,
+  .hv-glow-2 { animation: none !important; }
+
+  .clients-track-1,
+  .clients-track-2,
+  .client-marquee-track,
+  #marqueeTrack { animation: none !important; }
+
+  /* Shorten all transitions so the UI is still responsive */
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

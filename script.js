@@ -44,11 +44,13 @@ gsap.to(".hv-badge-2", { y: -20, repeat: -1, yoyo: true, duration: 3.5, ease: "s
 gsap.to(".hv-badge-3", { y: -10, repeat: -1, yoyo: true, duration: 2.2, ease: "sine.inOut", delay: 3.6 });
 
 /* ── 2b. ASTRONAUT + ASTEROID FLOAT ──────────────── */
-gsap.to(".hv-astro",  { y: -18, rotation:  3, repeat: -1, yoyo: true, duration: 3.4, ease: "sine.inOut", delay: 2.8 });
-gsap.to(".hv-rock-1", { y: -12, rotation: -9, repeat: -1, yoyo: true, duration: 4.2, ease: "sine.inOut", delay: 2.3 });
-gsap.to(".hv-rock-2", { y: -16, rotation: 12, repeat: -1, yoyo: true, duration: 3.6, ease: "sine.inOut", delay: 3.0 });
+// Delays set safely AFTER each element's entrance animation finishes:
+// rocks-1/2 entrance ends ~2.6s, rocks-3/4/5 ends ~2.4s, astro ends ~3.7s
+gsap.to(".hv-astro",  { y: -18, rotation:  3, repeat: -1, yoyo: true, duration: 3.4, ease: "sine.inOut", delay: 4.2 });
+gsap.to(".hv-rock-1", { y: -12, rotation: -9, repeat: -1, yoyo: true, duration: 4.2, ease: "sine.inOut", delay: 3.1 });
+gsap.to(".hv-rock-2", { y: -16, rotation: 12, repeat: -1, yoyo: true, duration: 3.6, ease: "sine.inOut", delay: 3.4 });
 gsap.to(".hv-rock-3", { y: -10, rotation: -5, repeat: -1, yoyo: true, duration: 2.9, ease: "sine.inOut", delay: 3.5 });
-gsap.to(".hv-rock-4", { y: -14, rotation:  7, repeat: -1, yoyo: true, duration: 3.8, ease: "sine.inOut", delay: 2.1 });
+gsap.to(".hv-rock-4", { y: -14, rotation:  7, repeat: -1, yoyo: true, duration: 3.8, ease: "sine.inOut", delay: 3.0 });
 gsap.to(".hv-rock-5", { y:  -8, rotation:-13, repeat: -1, yoyo: true, duration: 2.6, ease: "sine.inOut", delay: 3.9 });
 
 /* ── 2c. CODE CARD TYPEWRITER (once per page load) ── */
@@ -293,8 +295,8 @@ ScrollTrigger.create({
         { y: 28, opacity: 0 },
         { y: 0, opacity: 1, stagger: 0.1, duration: 0.55, ease: "power2.out" }, "-=0.4")
       .fromTo(".proc-strip-line",
-        { scaleX: 0, opacity: 0 },
-        { scaleX: 1, opacity: 1, stagger: 0.1, duration: 0.3, ease: "power2.out" }, "-=0.5")
+        { opacity: 0 },
+        { opacity: 1, stagger: 0.1, duration: 0.3, ease: "power2.out" }, "-=0.5")
       .fromTo(".processo .btn",
         { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45 }, "-=0.1");
   }
@@ -389,7 +391,7 @@ function activateDiff(idx) {
   diffCards.forEach(c => c.classList.remove("diff-active"));
   diffCards[idx].classList.add("diff-active");
   diffIdx = idx;
-  if (diffLabel) diffLabel.textContent = `0${idx + 1} // 04`;
+  if (diffLabel) diffLabel.textContent = `0${idx + 1} // 0${diffCards.length}`;
   gsap.from(diffCards[idx], { scale: 0.96, duration: 0.4, ease: "back.out(1.5)" });
 }
 
@@ -453,6 +455,14 @@ document.getElementById("menuToggle")?.addEventListener("click", () => {
     gsap.to(bars[1], { opacity: 0,          duration: 0.15 });
     gsap.to(bars[2], { rotation: -45, y: -7, duration: 0.25 });
     gsap.from(".nav-links li", { y: 10, opacity: 0, stagger: 0.06, duration: 0.3, ease: "power2.out", delay: 0.1 });
+    // Position nav-right exactly below nav-center (avoids hardcoded calc approximation)
+    requestAnimationFrame(() => {
+      const navCenter = document.querySelector('.nav-center');
+      const navRight  = document.querySelector('.nav-right');
+      if (navCenter && navRight) {
+        navRight.style.top = (navbar.offsetHeight + navCenter.offsetHeight) + 'px';
+      }
+    });
   } else {
     gsap.to(bars[0], { rotation: 0, y: 0, duration: 0.25 });
     gsap.to(bars[1], { opacity: 1,        duration: 0.15 });

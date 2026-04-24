@@ -4,19 +4,13 @@
    boosting.tech light-green palette.
 ══════════════════════════════════════════════════════ */
 (function () {
-  const PIX      = 3;        // dot size in px
-  const STEP     = 6;        // grid spacing in px
+  const PIX      = 3;
+  const STEP     = 6;
   const FRAME_MS = 1000 / 30; // cap at 30 fps
 
-  /* ── boosting.tech light palette ─────────────────────
-     Band mapping (diagonal, left-bottom → right-top):
-       C0  = sage green   (analogous to BR green)
-       C1  = mint cream   (analogous to BR yellow — lightest zone)
-       C2  = muted teal   (analogous to BR blue)
-  ────────────────────────────────────────────────── */
-  const C0 = { r: 130, g: 200, b: 165 }; // #82C8A5
-  const C1 = { r: 185, g: 232, b: 207 }; // #B9E8CF
-  const C2 = { r: 108, g: 175, b: 148 }; // #6CAF94
+  const C0 = { r: 130, g: 200, b: 165 };
+  const C1 = { r: 185, g: 232, b: 207 };
+  const C2 = { r: 108, g: 175, b: 148 };
 
   let t         = 0;
   let rafId     = null;
@@ -27,22 +21,28 @@
   const cv = document.createElement('canvas');
   cv.setAttribute('aria-hidden', 'true');
   cv.style.cssText = [
-    'position:fixed',
-    'top:0', 'left:0',
+    'position:fixed', 'top:0', 'left:0',
     'width:100%', 'height:100%',
-    'z-index:0',
-    'pointer-events:none',
+    'z-index:0', 'pointer-events:none',
   ].join(';');
 
   document.body.insertBefore(cv, document.body.firstChild);
   const ctx = cv.getContext('2d');
 
+  /* ── Resize — DPR-aware, debounced ──────────────── */
   function resize() {
-    cv.width  = window.innerWidth;
-    cv.height = window.innerHeight;
+    const dpr = window.devicePixelRatio || 1;
+    cv.width  = window.innerWidth  * dpr;
+    cv.height = window.innerHeight * dpr;
+    ctx.scale(dpr, dpr);
   }
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(resize, 150);
+  });
   resize();
-  window.addEventListener('resize', resize);
 
   /* ── Helpers ─────────────────────────────────────── */
   function lerp(a, b, f) {
@@ -70,37 +70,35 @@
     );
   }
 
-  /* ── Draw one frame ──────────────────────────────── */
+  /* ── Draw a single frame (shared by animated + static paths) */
+  function drawFrame(W, H) {
+    ctx.clearRect(0, 0, W, H);
+    for (let y = 0; y < H; y += STEP) {
+      for (let x = 0; x < W; x += STEP) {
+        const nx = x / W;
+        const ny = y / H;
+        const w1  = Math.sin(nx * 4.2 + ny * 2.6 + t * 0.35);
+        const w2  = Math.sin(nx * 1.9 - ny * 3.4 - t * 0.22);
+        const w3  = Math.cos((nx + ny) * 3.1 + t * 0.18);
+        const raw = (w1 * 0.42 + w2 * 0.33 + w3 * 0.25) * 0.5 + 0.5;
+        const ridge = Math.pow(1 - Math.abs(2 * raw - 1), 1.8);
+        if (ridge < 0.30) continue;
+        const norm = (ridge - 0.30) / 0.70;
+        const band = ((nx * 0.55 + (1 - ny) * 0.45 + Math.sin(t * 0.12) * 0.04 + raw * 0.08) % 1 + 1) % 1;
+        ctx.fillStyle = dotColor(band, norm);
+        ctx.fillRect(x, y, PIX, PIX);
+      }
+    }
+  }
+
+  /* ── Animated loop ───────────────────────────────── */
   function draw(ts) {
     if (!running) return;
     rafId = requestAnimationFrame(draw);
     if (ts - lastFrame < FRAME_MS) return;
     lastFrame = ts;
     t += 0.024;
-
-    const W = cv.width, H = cv.height;
-    ctx.clearRect(0, 0, W, H);
-
-    for (let y = 0; y < H; y += STEP) {
-      for (let x = 0; x < W; x += STEP) {
-        const nx = x / W;
-        const ny = y / H;
-
-        const w1  = Math.sin(nx * 4.2 + ny * 2.6 + t * 0.35);
-        const w2  = Math.sin(nx * 1.9 - ny * 3.4 - t * 0.22);
-        const w3  = Math.cos((nx + ny) * 3.1 + t * 0.18);
-        const raw = (w1 * 0.42 + w2 * 0.33 + w3 * 0.25) * 0.5 + 0.5;
-
-        const ridge = Math.pow(1 - Math.abs(2 * raw - 1), 1.8);
-        if (ridge < 0.30) continue;
-
-        const norm = (ridge - 0.30) / 0.70;
-        const band = ((nx * 0.55 + (1 - ny) * 0.45 + Math.sin(t * 0.12) * 0.04 + raw * 0.08) % 1 + 1) % 1;
-
-        ctx.fillStyle = dotColor(band, norm);
-        ctx.fillRect(x, y, PIX, PIX);
-      }
-    }
+    drawFrame(window.innerWidth, window.innerHeight);
   }
 
   /* ── Lifecycle ───────────────────────────────────── */
@@ -118,13 +116,12 @@
 
   // One static frame for users who prefer reduced motion
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    running = true;
-    draw(0);
-    running = false;
+    t = 0.5; // mid-point for a visually interesting static state
+    drawFrame(window.innerWidth, window.innerHeight);
     return;
   }
 
-  // Pause when the tab is hidden
+  // Pause when the tab is hidden to save CPU/battery
   document.addEventListener('visibilitychange', () => {
     document.hidden ? stop() : start();
   });

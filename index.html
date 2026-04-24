@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>boosting.tech — Aceleramos seu sucesso através da tecnologia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Pre-hide GSAP-animated elements to prevent flash -->
+  <style>
+    .hero-tag, .hero-word, .hero-sub, .hero-ctas, .stat-chip,
+    .hero-visual, .hv-badge, .hv-code, .hv-partners,
+    .hv-astro, .hv-rock { opacity: 0; }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="page-wrapper">
+<div class="site-card">
+
+  <!-- ═══════════════ NAVBAR ═══════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-left">
+      <a href="#home" class="nav-logo">
+        <img src="boosting_images/LOGO/logo_boosting.png" alt="boosting.tech" height="34">
+      </a>
+    </div>
+    <div class="nav-center" id="navCenter">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#solucoes">Soluções</a></li>
+        <li><a href="#empresa">Empresa</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contato" class="nav-highlight">Agende uma Consultoria</a></li>
+      </ul>
+    </div>
+    <div class="nav-right" id="navRight">
+      <div class="nav-contact">
+        <span class="nav-atend">Atendimento</span>
+        <a href="tel:+5522998003454" class="nav-phone">(22) 99800-3454</a>
+      </div>
+      <a href="#contato" class="btn btn-dark btn-sm">Fale Conosco</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <p class="hero-tag">Sua parceira em tecnologia</p>
+
+      <h1 class="hero-title">
+        <span class="hero-word">Aceleramos</span>
+        <span class="hero-word">seu sucesso</span>
+        <span class="hero-word">através da</span>
+        <span class="hero-word">tecnologia.</span>
+      </h1>
+
+      <p class="hero-sub">Soluções digitais poderosas e flexíveis para atender aos desafios do seu mercado.</p>
+
+      <div class="hero-ctas">
+        <a href="#contato" class="btn btn-dark btn-lg">Agende uma Consultoria Grátis</a>
+        <a href="#solucoes" class="btn btn-outline btn-lg">Serviços
+          <svg width="18" height="18" class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-chip">
+          <span class="chip-ico-wrap">
+            <svg width="18" height="18" class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </span>
+          <div class="stat-chip-info">
+            <strong>Data-Driven</strong>
+            <span>Resultados Mensuráveis</span>
+          </div>
+          <svg width="18" height="18" class="ico chip-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <div class="stat-chip stat-chip-alt">
+          <span class="chip-ico-wrap chip-ico-alt">
+            <svg width="18" height="18" class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+          </span>
+          <div class="stat-chip-info">
+            <strong>23+</strong>
+            <span>Projetos Concluídos</span>
+          </div>
+          <svg width="18" height="18" class="ico chip-arrow chip-arrow-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+    </div><!-- .hero-left -->
+
+    <div class="hero-right">
+      <div class="hero-visual">
+        <div class="hv-grid"></div>
+        <div class="hv-glow hv-glow-1"></div>
+        <div class="hv-glow hv-glow-2"></div>
+
+        <!-- Asteroids — back layer (z 2) -->
+        <img class="hv-rock hv-rock-1" src="boosting_images/astronauta/ChatGPT Image 23 de abr. de 2026, 18_24_38-Photoroom.png" alt="" aria-hidden="true">
+        <img class="hv-rock hv-rock-2" src="boosting_images/astronauta/ChatGPT Image 23 de abr. de 2026, 18_25_31-Photoroom.png" alt="" aria-hidden="true">
+
+        <!-- Asteroids — mid layer (z 4) -->
+        <img class="hv-rock hv-rock-3" src="boosting_images/astronauta/ChatGPT Image 23 de abr. de 2026, 18_26_26-Photoroom.png" alt="" aria-hidden="true">
+        <img class="hv-rock hv-rock-4" src="boosting_images/astronauta/ChatGPT Image 23 de abr. de 2026, 18_27_31-Photoroom.png" alt="" aria-hidden="true">
+
+        <!-- Astronaut — center layer (z 5) -->
+        <img class="hv-astro" src="boosting_images/astronauta/10a652c7-7355-47a4-8c9a-11cb75f916b1-Photoroom.png" alt="Astronauta boosting.tech" aria-hidden="true">
+
+        <!-- Asteroid — front layer (z 6, in front of astronaut) -->
+        <img class="hv-rock hv-rock-5" src="boosting_images/astronauta/ChatGPT Image 23 de abr. de 2026, 18_20_01-Photoroom.png" alt="" aria-hidden="true">
+
+        <!-- Floating badge labels -->
+        <div class="hv-badge hv-badge-1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span>Inovador</span>
+          <span class="hv-badge-plus">+</span>
+        </div>
+        <div class="hv-badge hv-badge-2 hv-badge-active">
+          <span>Tecnologia</span>
+        </div>
+        <div class="hv-badge hv-badge-3">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Confiável</span>
+          <span class="hv-badge-plus">+</span>
+        </div>
+
+        <!-- Code card -->
+        <div class="hv-code">
+          <div class="hv-code-bar">
+            <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+          </div>
+          <div class="hv-code-line"><span class="ck">const</span> <span class="cv">success</span> = <span class="cf">boosting</span>();</div>
+          <div class="hv-code-line"><span class="cc">// Acelerando seu negócio</span></div>
+          <div class="hv-code-line"><span class="ck">return</span> <span class="cs">"resultados"</span>;</div>
+          <div class="hv-code-line"><span class="cc">// +5M linhas entregues</span></div>
+        </div>
+
+        <!-- Partner logos strip -->
+        <div class="hv-partners">
+          <div class="hv-partner-slot">
+            <img src="boosting_images/Partners/partner_aws.png" alt="AWS">
+          </div>
+          <div class="hv-partner-slot">
+            <img src="boosting_images/Partners/partner_google_cloud.png" alt="Google Cloud">
+          </div>
+          <div class="hv-partner-slot">
+            <img src="boosting_images/Partners/partner_microsoft.png" alt="Microsoft" class="ms-logo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CLIENTES MARQUEE ═══════════════ -->
+  <section class="clients-section">
+
+    <!-- Row 1 — angle -4deg, moves left -->
+    <div class="clients-row-wrap clients-row-1">
+      <div class="clients-track clients-track-1">
+        <div class="clogo-box"><img src="boosting_images/Clientes/ativar_logo_invertido-e1727824135113-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="Ativar"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/edison-chouest-offshore-78728148-removebg-preview-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="Edison Chouest Offshore"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo-black-new-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="EasyCard"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo-novo-bram-r1g9crjw4izf089d3l2rrqffdfhml85ix8ah37pfy8.png" alt="Bram Offshore"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/osx-logo-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="OSX Brasil"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo2-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="FBPN"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo-r1g98k7vk78930d6n9nu4am7qe7j5ygqof9atnxts0.png" alt="Interactive Funnel"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/Logo_PretoVerde-scaled-rhexao6c43d2my87aqun6ngu834vad6c27orsrvgg0.png" alt="Ambipar"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo_sysnutri-01-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="SysNutri"></div>
+        <!-- clone for seamless loop -->
+        <div class="clogo-box"><img src="boosting_images/Clientes/ativar_logo_invertido-e1727824135113-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="Ativar"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/edison-chouest-offshore-78728148-removebg-preview-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="Edison Chouest Offshore"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo-black-new-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="EasyCard"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo-novo-bram-r1g9crjw4izf089d3l2rrqffdfhml85ix8ah37pfy8.png" alt="Bram Offshore"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/osx-logo-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="OSX Brasil"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo2-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="FBPN"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo-r1g98k7vk78930d6n9nu4am7qe7j5ygqof9atnxts0.png" alt="Interactive Funnel"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/Logo_PretoVerde-scaled-rhexao6c43d2my87aqun6ngu834vad6c27orsrvgg0.png" alt="Ambipar"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo_sysnutri-01-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="SysNutri"></div>
+      </div>
+    </div>
+
+    <!-- Row 2 — angle +4deg, moves right (opposite = X cross) -->
+    <div class="clients-row-wrap clients-row-2">
+      <div class="clients-track clients-track-2">
+        <div class="clogo-box"><img src="boosting_images/Clientes/Logo_PretoVerde-scaled-rhexao6c43d2my87aqun6ngu834vad6c27orsrvgg0.png" alt="Ambipar"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo_conts_azul-02-copia-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="Conts"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo_sysnutri-01-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="SysNutri"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo_branco-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="BPort"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo_farm2trader-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.jpg" alt="Farm2Trader"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.jpg" alt="Tank Clean"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/ativar_logo_invertido-e1727824135113-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="Ativar"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo-black-new-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="EasyCard"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo2-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="FBPN"></div>
+        <!-- clone for seamless loop -->
+        <div class="clogo-box"><img src="boosting_images/Clientes/Logo_PretoVerde-scaled-rhexao6c43d2my87aqun6ngu834vad6c27orsrvgg0.png" alt="Ambipar"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo_conts_azul-02-copia-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="Conts"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo_sysnutri-01-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="SysNutri"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo_branco-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="BPort"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo_farm2trader-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.jpg" alt="Farm2Trader"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.jpg" alt="Tank Clean"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/ativar_logo_invertido-e1727824135113-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="Ativar"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo-black-new-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="EasyCard"></div>
+        <div class="clogo-box"><img src="boosting_images/Clientes/logo2-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="FBPN"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SOBRE / CONTADOR ═══════════════ -->
+  <section class="about" id="empresa">
+    <div class="about-top">
+      <p class="section-tag">O QUE NÓS FAZEMOS</p>
+      <h2 class="section-title">Impulsionando negócios<br>através da tecnologia.</h2>
+      <a href="#contato" class="btn btn-dark">Conheça Mais</a>
+    </div>
+
+    <!-- Big counter -->
+    <div class="about-counter">
+      <span class="counter-num" id="mainCounter">0</span>
+    </div>
+    <p class="counter-sub">linhas de código entregues</p>
+
+    <!-- Metrics row -->
+    <div class="metrics-row">
+      <div class="metric">
+        <strong class="mval" data-target="10" data-prefix="+" data-suffix="">+10</strong>
+        <span class="mlabel">anos de mercado</span>
+      </div>
+      <div class="metric">
+        <strong class="mval" data-target="100" data-prefix="" data-suffix="%">100%</strong>
+        <span class="mlabel">satisfação do cliente</span>
+      </div>
+      <div class="metric">
+        <strong class="mval" data-target="23" data-prefix="" data-suffix="">23</strong>
+        <span class="mlabel">projetos concluídos</span>
+      </div>
+      <div class="metric metric-google">
+        <div class="grating-brand">
+          <svg class="grating-g" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+          <span class="grating-name">Google</span>
+          <span class="grating-sep">·</span>
+          <span class="grating-tag">Avaliações</span>
+        </div>
+        <strong class="mval grating-score">4.9<span class="grating-of">/5</span></strong>
+        <span class="mlabel grating-stars">
+          <span class="star-row" aria-label="4.9 de 5 estrelas">
+            <svg width="14" height="14" class="ico-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" class="ico-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" class="ico-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" class="ico-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" class="ico-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Marquee -->
+    <div class="marquee-wrap">
+      <div class="marquee-track" id="marqueeTrack">
+        <span>ACELERANDO SEU SUCESSO</span>
+        <img src="boosting_images/LOGO/cropped-logo_boosting-02.png" alt="" class="mq-logo">
+        <span>TECNOLOGIA QUE TRANSFORMA</span>
+        <img src="boosting_images/LOGO/cropped-logo_boosting-02.png" alt="" class="mq-logo">
+        <span>RESULTADOS QUE IMPORTAM</span>
+        <img src="boosting_images/LOGO/cropped-logo_boosting-02.png" alt="" class="mq-logo">
+        <span>INOVAÇÃO CONSTANTE</span>
+        <img src="boosting_images/LOGO/cropped-logo_boosting-02.png" alt="" class="mq-logo">
+        <!-- duplicate for seamless loop -->
+        <span>ACELERANDO SEU SUCESSO</span>
+        <img src="boosting_images/LOGO/cropped-logo_boosting-02.png" alt="" class="mq-logo">
+        <span>TECNOLOGIA QUE TRANSFORMA</span>
+        <img src="boosting_images/LOGO/cropped-logo_boosting-02.png" alt="" class="mq-logo">
+        <span>RESULTADOS QUE IMPORTAM</span>
+        <img src="boosting_images/LOGO/cropped-logo_boosting-02.png" alt="" class="mq-logo">
+        <span>INOVAÇÃO CONSTANTE</span>
+        <img src="boosting_images/LOGO/cropped-logo_boosting-02.png" alt="" class="mq-logo">
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ DIFERENCIAIS ═══════════════ -->
+  <section class="diffs" id="diferenciais">
+    <div class="diffs-header">
+      <span class="diff-counter-label" id="diffCounterLabel">01 // 04</span>
+      <h2 class="section-title">Por que escolher<br>a boosting.tech?</h2>
+      <div class="diff-nav-btns">
+        <button class="diff-nav-btn" id="diffPrev" aria-label="Anterior">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        </button>
+        <button class="diff-nav-btn diff-nav-active" id="diffNext" aria-label="Próximo">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="diff-cards" id="diffCards">
+      <div class="diff-card" data-idx="0">
+        <div class="diff-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>Custo-benefício</h3>
+        <p>Oferecemos soluções de TI acessíveis que ajudam você a reduzir custos e melhorar seus resultados.</p>
+      </div>
+      <div class="diff-card" data-idx="1">
+        <div class="diff-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3>Tecnologia Inovadora</h3>
+        <p>Estamos atualizados com as últimas tendências tecnológicas e oferecemos soluções inovadoras que ajudam você a ficar à frente da concorrência.</p>
+      </div>
+      <div class="diff-card" data-idx="2">
+        <div class="diff-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </div>
+        <h3>Expertise na Indústria</h3>
+        <p>Somos especializados em atender inúmeros segmentos, do offshore à saúde e oferecemos soluções personalizadas que atendem às suas necessidades.</p>
+      </div>
+      <div class="diff-card" data-idx="3">
+        <div class="diff-card-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <h3>Escalabilidade</h3>
+        <p>Nossas soluções são escaláveis e podem crescer com o seu negócio, garantindo que você obtenha o máximo valor do seu investimento.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SOLUÇÕES ═══════════════ -->
+  <section class="services" id="solucoes">
+    <div class="services-top">
+      <div class="services-top-left">
+        <p class="section-tag">COMO NÓS FAZEMOS</p>
+        <h2 class="section-title">Soluções para<br>cada desafio</h2>
+      </div>
+      <div class="services-top-right">
+        <p>Desenvolvemos soluções digitais que transformam desafios em oportunidades para o seu negócio crescer e se destacar no mercado.</p>
+        <a href="#contato" class="btn btn-outline btn-lg">Fale Conosco
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="ovals-wrap" id="ovalsWrap">
+      <div class="oval-item oval-active" data-svc="0">
+        <div class="oval-body">
+          <img src="boosting_images/Imagems%20setor/Gerenciados%20servi%C3%A7os.png" alt="Serviços Gerenciados" class="oval-img">
+          <div class="oval-overlay"></div>
+          <div class="oval-text">Gerenciados</div>
+        </div>
+        <div class="oval-link" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+      <div class="oval-item" data-svc="1">
+        <div class="oval-body">
+          <img src="boosting_images/Imagems%20setor/EM%20TI%20CONSULTORIA.png" alt="Consultoria em TI" class="oval-img">
+          <div class="oval-overlay"></div>
+          <div class="oval-text">Consultoria TI</div>
+        </div>
+        <div class="oval-link" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+      <div class="oval-item" data-svc="2">
+        <div class="oval-body">
+          <img src="boosting_images/Imagems%20setor/Seguran%C3%A7a%20cyber.png" alt="Cibersegurança" class="oval-img">
+          <div class="oval-overlay"></div>
+          <div class="oval-text">Cibersegurança</div>
+        </div>
+        <div class="oval-link" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+      <div class="oval-item" data-svc="3">
+        <div class="oval-body">
+          <img src="boosting_images/Imagems%20setor/DEV%20WEB.png" alt="Desenvolvimento Web" class="oval-img">
+          <div class="oval-overlay"></div>
+          <div class="oval-text">Dev. Web</div>
+        </div>
+        <div class="oval-link" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+      <div class="oval-item" data-svc="4">
+        <div class="oval-body">
+          <img src="boosting_images/Imagems%20setor/MOBILE%20DEV%20.png" alt="Desenvolvimento Mobile" class="oval-img">
+          <div class="oval-overlay"></div>
+          <div class="oval-text">Dev. Mobile</div>
+        </div>
+        <div class="oval-link" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+      <div class="oval-item" data-svc="5">
+        <div class="oval-body">
+          <img src="boosting_images/Imagems%20setor/EM%20NUVEM%20SERVI%C3%87OS.png" alt="Serviços em Nuvem" class="oval-img">
+          <div class="oval-overlay"></div>
+          <div class="oval-text">Cloud</div>
+        </div>
+        <div class="oval-link" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SEGMENTOS ═══════════════ -->
+  <section class="segments" id="segmentos">
+    <p class="section-tag">SEGMENTOS ATENDIDOS</p>
+
+    <div class="seg-display">
+      <p class="seg-prefix">Especialistas no setor</p>
+      <div class="seg-typed-row">
+        <span class="seg-typed" id="segTyped"></span><span class="seg-cursor" id="segCursor" aria-hidden="true">|</span>
+      </div>
+    </div>
+
+    <div class="seg-list">
+      <span>Industrial</span><span class="seg-dot">·</span>
+      <span>Logística Offshore</span><span class="seg-dot">·</span>
+      <span>Saúde</span><span class="seg-dot">·</span>
+      <span>Financeiros</span><span class="seg-dot">·</span>
+      <span>Consultorias</span><span class="seg-dot">·</span>
+      <span>Entidades</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROCESSO ═══════════════ -->
+  <section class="processo" id="processo">
+    <div class="processo-inner">
+      <p class="section-tag light-tag">NOSSO PROCESSO</p>
+      <h2 class="section-title light-title">Consultoria de Diagnóstico Gratuita</h2>
+
+      <div class="proc-strip">
+        <div class="proc-pill">
+          <span class="proc-pill-n">01</span>
+          <div class="proc-pill-body">
+            <strong>Agendamento</strong>
+            <span>Alinhamos o melhor dia e horário</span>
+          </div>
+        </div>
+        <div class="proc-strip-line" aria-hidden="true"></div>
+        <div class="proc-pill">
+          <span class="proc-pill-n">02</span>
+          <div class="proc-pill-body">
+            <strong>Diagnóstico</strong>
+            <span>Consultoria gratuita com especialistas</span>
+          </div>
+        </div>
+        <div class="proc-strip-line" aria-hidden="true"></div>
+        <div class="proc-pill">
+          <span class="proc-pill-n">03</span>
+          <div class="proc-pill-body">
+            <strong>Proposta Comercial</strong>
+            <span>Solução personalizada para seu negócio</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#contato" class="btn btn-green">AGENDE UMA CONSULTORIA GRATUITA</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CONTATO ═══════════════ -->
+  <section class="contact" id="contato">
+    <div class="contact-left">
+      <h2 class="section-title contact-anim">Falta pouco. Será que você é nosso próximo case de sucesso?</h2>
+      <p class="contact-desc">Teremos prazer em responder a quaisquer perguntas que você possa ter e ajudá-lo a determinar qual dos nossos serviços melhor atende às suas necessidades.</p>
+      <p class="contact-tel">Fale conosco em: <strong>+55 22 998003454</strong></p>
+
+      <ul class="benefits">
+        <li>
+          <svg width="16" height="16" class="ico-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Método de Sprints
+        </li>
+        <li>
+          <svg width="16" height="16" class="ico-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Acompanhamento Contínuo
+        </li>
+        <li>
+          <svg width="16" height="16" class="ico-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Especialistas em Startups e MVP
+        </li>
+        <li>
+          <svg width="16" height="16" class="ico-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Serviços 40% mais econômicos
+        </li>
+        <li>
+          <svg width="16" height="16" class="ico-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Obcecada pela solução
+        </li>
+        <li>
+          <svg width="16" height="16" class="ico-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Transparência no processo
+        </li>
+      </ul>
+
+      <div class="steps">
+        <div class="step">
+          <span class="step-n">01</span>
+          <span>Nós alinhamos o melhor dia e horário</span>
+        </div>
+        <div class="step">
+          <span class="step-n">02</span>
+          <span>Faremos uma consultoria para diagnóstico</span>
+        </div>
+        <div class="step">
+          <span class="step-n">03</span>
+          <span>Preparamos uma proposta comercial</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right">
+      <div class="form-card">
+        <h3>Agende uma consultoria grátis</h3>
+        <form class="cform" id="cform">
+          <div class="form-row">
+            <input type="text" placeholder="Qual seu nome?" class="fi">
+            <input type="text" placeholder="Empresa" class="fi">
+          </div>
+          <select class="fi">
+            <option value="">Quantidade de Funcionários?</option>
+            <option>Até 5</option>
+            <option>Entre 5 e 20</option>
+            <option>Acima de 20</option>
+          </select>
+          <div class="form-row">
+            <input type="email" placeholder="Seu melhor email?" class="fi">
+            <input type="tel" placeholder="Telefone/Whatsapp" class="fi">
+          </div>
+          <select class="fi">
+            <option value="">Solução desejada</option>
+            <option>Desenvolvimento Web</option>
+            <option>Desenvolvimento Mobile</option>
+            <option>Cibersegurança</option>
+            <option>Consultoria em TI</option>
+            <option>Serviços em Nuvem</option>
+            <option>Outros</option>
+          </select>
+          <select class="fi">
+            <option value="">Expectativa de investimento?</option>
+            <option>Até R$ 50 mil</option>
+            <option>Entre R$ 50 mil e R$ 100 mil</option>
+            <option>Entre R$ 100 mil e R$ 200 mil</option>
+            <option>Acima de R$ 200 mil</option>
+          </select>
+          <select class="fi">
+            <option value="">Já contratou serviços de tecnologia?</option>
+            <option>Sim</option>
+            <option>Não</option>
+          </select>
+          <textarea class="fi fi-ta" placeholder="Quanto mais detalhes, melhor ;)"></textarea>
+          <button type="submit" class="btn btn-dark btn-full" id="submitBtn">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PARCEIROS ═══════════════ -->
+  <section class="partners" id="parceiros">
+    <p class="section-tag">PARCEIROS</p>
+    <h2 class="section-title">Referências no mercado</h2>
+    <p class="partners-desc">Nossas soluções contam com a parceria de marcas renomadas no mercado de tecnologia, sempre levando o melhor até você.</p>
+    <div class="partner-logos">
+      <div class="plogo"><img src="boosting_images/Partners/partner_google_cloud.png" alt="Google Cloud Partner"></div>
+      <div class="plogo"><img src="boosting_images/Partners/partner_oracle.png" alt="Oracle Partner"></div>
+      <div class="plogo"><img src="boosting_images/Partners/partner_microsoft.png" alt="Microsoft Solutions Partner" class="ms-logo"></div>
+      <div class="plogo"><img src="boosting_images/Partners/partner_aws.png" alt="AWS Partner Network"></div>
+    </div>
+    <div class="divider-label">Clientes</div>
+    <div class="client-marquee-wrap">
+      <div class="client-marquee-track" id="clientTrack">
+        <!-- set 1 -->
+        <div class="plogo"><img src="boosting_images/Clientes/edison-chouest-offshore-78728148-removebg-preview-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="Edison Chouest"></div>
+        <div class="plogo"><img src="boosting_images/Clientes/logo-novo-bram-r1g9crjw4izf089d3l2rrqffdfhml85ix8ah37pfy8.png" alt="Bram Offshore"></div>
+        <div class="plogo"><img src="boosting_images/Clientes/logo-fmc-c5a5964d51b0b444a275ef453ecd8bb43b363c5a73138f2510545be1a1e46917-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.webp" alt="FMC"></div>
+        <div class="plogo"><img src="boosting_images/Clientes/osx-logo-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="OSX Brasil"></div>
+        <div class="plogo"><img src="boosting_images/Clientes/logo_sysnutri-01-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="SysNutri"></div>
+        <div class="plogo"><img src="boosting_images/Clientes/Logo_PretoVerde-scaled-rhexao6c43d2my87aqun6ngu834vad6c27orsrvgg0.png" alt="Cliente"></div>
+        <!-- set 2 -->
+        <div class="plogo"><img src="boosting_images/Clientes/edison-chouest-offshore-78728148-removebg-preview-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="Edison Chouest"></div>
+        <div class="plogo"><img src="boosting_images/Clientes/logo-novo-bram-r1g9crjw4izf089d3l2rrqffdfhml85ix8ah37pfy8.png" alt="Bram Offshore"></div>
+        <div class="plogo"><img src="boosting_images/Clientes/logo-fmc-c5a5964d51b0b444a275ef453ecd8bb43b363c5a73138f2510545be1a1e46917-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.webp" alt="FMC"></div>
+        <div class="plogo"><img src="boosting_images/Clientes/osx-logo-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="OSX Brasil"></div>
+        <div class="plogo"><img src="boosting_images/Clientes/logo_sysnutri-01-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="SysNutri"></div>
+        <div class="plogo"><img src="boosting_images/Clientes/Logo_PretoVerde-scaled-rhexao6c43d2my87aqun6ngu834vad6c27orsrvgg0.png" alt="Cliente"></div>
+        <!-- set 3 (ensures no gap on any screen width) -->
+        <div class="plogo"><img src="boosting_images/Clientes/edison-chouest-offshore-78728148-removebg-preview-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="Edison Chouest"></div>
+        <div class="plogo"><img src="boosting_images/Clientes/logo-novo-bram-r1g9crjw4izf089d3l2rrqffdfhml85ix8ah37pfy8.png" alt="Bram Offshore"></div>
+        <div class="plogo"><img src="boosting_images/Clientes/logo-fmc-c5a5964d51b0b444a275ef453ecd8bb43b363c5a73138f2510545be1a1e46917-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.webp" alt="FMC"></div>
+        <div class="plogo"><img src="boosting_images/Clientes/osx-logo-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="OSX Brasil"></div>
+        <div class="plogo"><img src="boosting_images/Clientes/logo_sysnutri-01-quz66m47czaixzfsoww87422jbym2aybtei2gnx8g0.png" alt="SysNutri"></div>
+        <div class="plogo"><img src="boosting_images/Clientes/Logo_PretoVerde-scaled-rhexao6c43d2my87aqun6ngu834vad6c27orsrvgg0.png" alt="Cliente"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CTA FINAL ═══════════════ -->
+  <section class="cta-end">
+
+    <div class="cta-end-top">
+
+      <!-- Label tag -->
+      <span class="cta-end-pre">Pronto para começar?</span>
+
+      <!-- Icon trio -->
+      <div class="cta-end-icons">
+        <span class="cta-end-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </span>
+        <span class="cta-end-icon cta-end-icon-mid">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </span>
+        <span class="cta-end-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+        </span>
+      </div>
+
+      <h2 class="cta-end-h">Tem dúvidas?<br>Estamos aqui.</h2>
+
+      <p class="cta-end-sub">Nossa equipe está pronta para transformar seu negócio com soluções de tecnologia sob medida.</p>
+
+      <a href="#contato" class="btn btn-green btn-xl cta-end-btn">Agende uma Consultoria Grátis
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+
+      <div class="cta-divider">
+        <span>ou conecte-se nas redes</span>
+      </div>
+
+      <div class="social-row">
+        <a href="#" class="social-btn" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="X (Twitter)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.631 5.905-5.631zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="YouTube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.95C18.88 4 12 4 12 4s-6.88 0-8.59.47a2.78 2.78 0 0 0-1.95 1.95A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.53C5.12 20 12 20 12 20s6.88 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+        </a>
+      </div>
+
+    </div><!-- .cta-end-top -->
+
+    <div class="cta-biglogo" id="ctaBigLogo">
+      <span>boosting</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="boosting_images/LOGO/logo_boosting.png" alt="boosting.tech" height="38">
+        <p class="footer-rating">
+          <span class="star-row" aria-label="4.9 de 5 estrelas">
+            <svg width="14" height="14" class="ico-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" class="ico-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" class="ico-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" class="ico-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="14" height="14" class="ico-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </span>
+          4.9/5 — Google Avaliações
+        </p>
+        <p>Brasil | Campos dos Goytacazes – RJ</p>
+        <p>T: +55 22 998003454</p>
+        <p>E: hello@boosting.tech</p>
+      </div>
+      <div class="footer-col">
+        <h4>Soluções</h4>
+        <ul>
+          <li><a href="#">Serviços Gerenciados</a></li>
+          <li><a href="#">Consultoria em TI</a></li>
+          <li><a href="#">Cibersegurança</a></li>
+          <li><a href="#">Desenvolvimento Web</a></li>
+          <li><a href="#">Desenvolvimento Mobile</a></li>
+          <li><a href="#">Serviços em Nuvem</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="#">Por que boosting.tech?</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Ação</h4>
+        <a href="#contato" class="btn btn-dark btn-sm">Agendar Consultoria Gratuita</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 boosting.tech</span>
+      <a href="#">Termos e Condições</a>
+      <a href="#">Política de Privacidade</a>
+    </div>
+  </footer>
+
+</div><!-- .site-card -->
+</div><!-- .page-wrapper -->
+
+<script src="bg.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+# Dependências
+node_modules/
+
+# Saída do gravador de vídeo
+boosting_demo.mp4
+_frames/
+
+# Arquivos temporários / locais
+.vscode/
+video-to-image-sequence/
+boosting_images.zip
+Documentação Completa do Site boosting.tech
